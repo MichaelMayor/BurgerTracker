@@ -15,7 +15,7 @@ var burger = {
     },
     // set burger to devoured
     devourBurger: function (burgerID, cb) {
-        let objColVals = "{devoured: true}";
+        let objColVals = {devoured: true};
         let condition = "id=" + burgerID;
         orm.updateOne("burgers", objColVals, condition, function (res) {
             cb(res);
